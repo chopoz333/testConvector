@@ -1,0 +1,1 @@
+export const selectRates = (state) => state.exchangeRates.rates;
