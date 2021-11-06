@@ -21,7 +21,6 @@ const Converter = () => {
   } = useSelector(selectRates, shallowEqual);
 
   const convert = () => {
-    //Если принципиально по клавише Enter то можно добавить проверку по event.key
     if (selectedRate === "ru") setConvertedValue((value / rates.USD.Value).toFixed(3));
     if (selectedRate === "en") setConvertedValue((value * rates.USD.Value).toFixed(3));
   };
@@ -77,13 +76,6 @@ const Converter = () => {
     </Container>
   )
 }
-// CharCode: "JPY"
-// ID: "R01820"
-// Name: "Японских иен"
-// Nominal: 100
-// NumCode: "392"
-// Previous: 62.9017
-// Value: 62.7828
 
 const Container = styled.div`
   text-align: center;
